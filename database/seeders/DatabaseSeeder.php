@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Barang;
+use App\Models\Harga;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,11 +13,55 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        Barang::factory()->create([
+            'nama_barang' => 'Kucing',
+            'jenis_barang' => 'Hewan',
+        ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        Harga::factory()->create([
+            'barang_id' => 1,
+            'harga_barang' => 10000,
+            'tempat_barang' => 'Indomaret',
+        ]);
+
+        Harga::factory()->create([
+            'barang_id' => 1,
+            'harga_barang' => 15000,
+            'tempat_barang' => 'Alfamart',
+        ]);
+
+        Barang::factory()->create([
+            'nama_barang' => 'Aqua',
+            'jenis_barang' => 'Minuman',
+        ]);
+
+        Harga::factory()->create([
+            'barang_id' => 2,
+            'harga_barang' => 5000,
+            'tempat_barang' => 'Indomaret',
+        ]);
+
+        Harga::factory()->create([
+            'barang_id' => 2,
+            'harga_barang' => 4500,
+            'tempat_barang' => 'Alfamart',
+        ]);
+
+        Barang::factory()->create([
+            'nama_barang' => 'Qtella',
+            'jenis_barang' => 'Snack',
+        ]);
+
+        Harga::factory()->create([
+            'barang_id' => 3,
+            'harga_barang' => 20000,
+            'tempat_barang' => 'Indomaret',
+        ]);
+
+        Harga::factory()->create([
+            'barang_id' => 3,
+            'harga_barang' => 18000,
+            'tempat_barang' => 'Alfamart',
         ]);
     }
 }
