@@ -12,7 +12,7 @@
     <div class="container">
         <h1>Daftar barang</h1>
         <hr>
-        @livewire('barang-table')
+        <livewire:barang-table />
     </div>
 @endsection
 
